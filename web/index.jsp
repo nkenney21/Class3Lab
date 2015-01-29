@@ -18,39 +18,13 @@ and open the template in the editor.
             <p><% 
             Object objList1 = request.getAttribute("rectangleArea");
             Object objList2 = request.getAttribute("circleArea");
-            Object objList3 = request.getAttribute("triangleArea");
-            if(objList1 == null && objList2 == null && objList3 == null){%>
+            Object objList3 = request.getAttribute("triangleArea");%>
+        
             <div class="container">
-                <center><h1>Area of Shapes</h1></center>
+            <center><h1>Area of Shapes</h1></center>
                 <br>
-                <h2>Area of a Triangle</h2>
-            <form id="rectangleCalc" name="rectangleCalc" method="POST" action="CalculatorController?area=rectangle"/>
-                <input id="length" name="length" type="number" value=""/>Length
-                <input id="width" name="width" type="number" value=""/>Width
-                <input type="submit" name="submit" value="Calculate"/>
-            </form>
-            <br>
-            <h2>Area of a Circle</h2>
-            <form id="circleArea" name="circleArea" method="POST" action="CalculatorController?area=circle"/>
-                <input id="radius" name="radius" type="number" value=""/>Radius
-               
-                <input type="submit" name="submit" value="Calculate"/>
-            </form>
-            <br>
-            <h2>Area of a Triangle</h2>
-            <form id="triangleArea" name="triangleArea" method="POST" action="CalculatorController?area=triangle"/>
-                <input id="base" name="base" type="number" value=""/>Base
-                <input id="height" name="height" type="number" value=""/>Height
-                <input type="submit" name="submit" value="Calculate"/>
-            </form>
-            <br>
-            <div
-            
-            <%  
-            }
-            else{%>
-            <div class="container">
-            <h2>Area of a Rectangle</h2>
+                <h2>Area of a Rectangle</h2>
+                <img src="images/rectangleAreaPic.jpg" alt=""/>
             <form id="rectangleCalc" name="rectangleCalc" method="POST" action="CalculatorController?area=rectangle"/>
                 <input id="length" name="length" type="number" value=""/>Length
                 <input id="width" name="width" type="number" value=""/>Width
@@ -58,6 +32,7 @@ and open the template in the editor.
             </form>
             <br>
                 <h2>Area of a Circle</h2>
+                <img src="images/circleAreaPic.jpg" alt=""/>
             <form id="circleArea" name="circleArea" method="POST" action="CalculatorController?area=circle"/>
                 <input id="radius" name="radius" type="number" value=""/>Radius
                
@@ -65,6 +40,7 @@ and open the template in the editor.
             </form>
             <br>
             <h2>Area of a Triangle</h2>
+            <img src="images/triangleAreaPic.jpg" alt=""/>
             <form id="triangleArea" name="triangleArea" method="POST" action="CalculatorController?area=triangle"/>
                 <input id="base" name="base" type="number" value=""/>Base
                 <input id="height" name="height" type="number" value=""/>Height
@@ -72,10 +48,6 @@ and open the template in the editor.
             </form>
             <br>
                 </div>
-            <%
-               
-            }
            
-            %>
         </body>
 </html>

@@ -11,12 +11,13 @@ and open the template in the editor.
 body {
     margin: 0;
     padding: 0;
+    background-color: #E0E0AF;
 }
 
 .container {
     width: 900px;
     margin: 15px auto;
-    background-color: #E0E0AF;
+    background-color: white;
     border: 2px solid;
     border-radius: 25px;
     box-shadow: 10px 10px 5px #888888;

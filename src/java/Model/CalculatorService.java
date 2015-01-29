@@ -2,12 +2,14 @@
 
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author neilkenney
  */
-public class CalculatorService {
-    
+public class CalculatorService implements Serializable {
+    private int serviceId;
     
     public double getRectangleArea(double length, double width){
         
@@ -24,5 +26,37 @@ public class CalculatorService {
         
         return .5 * base * height;
     }
+
+    public int getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(int serviceId) {
+        this.serviceId = serviceId;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 73 * hash + this.serviceId;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final CalculatorService other = (CalculatorService) obj;
+        if (this.serviceId != other.serviceId) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 
 }
