@@ -56,6 +56,7 @@ public class CalculatorController extends HttpServlet {
             Double base = Double.parseDouble(request.getParameter("base"));
             Double height = Double.parseDouble(request.getParameter("height"));
             request.setAttribute("triangleArea", calc.getTriangleArea(base, height));
+            
         }
             RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
             view.forward(request, response);
