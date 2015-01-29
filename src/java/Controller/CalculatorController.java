@@ -40,7 +40,7 @@ public class CalculatorController extends HttpServlet {
         area = request.getParameter("area");
 
         CalculatorService calc = new CalculatorService();
-
+       try{
         if (area.equals("rectangle")) {
             Double length = Double.parseDouble(request.getParameter("length"));
             Double width = Double.parseDouble(request.getParameter("width"));
@@ -58,6 +58,10 @@ public class CalculatorController extends HttpServlet {
             request.setAttribute("triangleArea", calc.getTriangleArea(base, height));
             
         }
+       }catch(Exception nullValue){
+           RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
+            view.forward(request, response);
+       }
             RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
             view.forward(request, response);
         
